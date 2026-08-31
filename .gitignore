@@ -1,0 +1,20 @@
+# Outputs
+dist/
+build/
+.out
+# Log files
+logs/
+.noise
+# Dev mode
+*.log
+# Data
+data.json
+# Images
+*.png
+assets/img/
+# IDE
+.idea/
+.vscode/
+*.swp
+# Build
+node_modules/
