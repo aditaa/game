@@ -1,1 +1,47 @@
-<button id="pause-button" class="start-button" type="button">Pause</button>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>Padda Ripples</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">A tiny click-gathering game</p>
+        <h1>Padda Ripples</h1>
+        <p class="tagline">Find the glowing Paddas, build a combo, and keep the pond alive.</p>
+      </div>
+      <button id="start-button" class="start-button" type="button">Start round</button>
+      <button id="pause-button" class="start-button" type="button">Pause</button>
+      <button id="reset-button" class="start-button" type="button">Reset State</button>
+    </header>
+
+    <section class="hud" aria-label="Game statistics">
+      <div><span>Score</span><strong id="score">0</strong></div>
+      <div><span>Combo</span><strong id="combo">x1</strong></div>
+      <div><span>Time</span><strong id="time">30.0</strong></div>
+      <div><span>Best</span><strong id="best">0</strong></div>
+    </section>
+
+    <section class="pond-wrap">
+      <canvas id="game-canvas" width="960" height="560" tabindex="0" role="application" aria-label="Padda Ripples game area. Click glowing Paddas, or press Space to collect the nearest one."></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-title" class="overlay-title">Ready to make some ripples?</p>
+        <p id="overlay-copy">Click glowing Paddas. Press Space or Enter for keyboard play.</p>
+      </div>
+    </section>
+
+    <section class="legend" aria-label="Padda abilities">
+      <p><i class="dot dot-sun"></i><strong>Sun</strong> scores big</p>
+      <p><i class="dot dot-tide"></i><strong>Tide</strong> adds time</p>
+      <p><i class="dot dot-moss"></i><strong>Moss</strong> boosts your combo</p>
+    </section>
+    <p id="announcer" class="sr-only" aria-live="polite"></p>
+  </main>
+  <script src="runner.js"></script>
+</body>
+</html>
