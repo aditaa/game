@@ -1,8 +1,6 @@
-  function resetState() {
-    state.paddas = [];
-    state.ripples = [];
+  function pauseGame() {
+    state.running = false;
     updateHud();
   }
-  // attach
-  const resetButton = document.querySelector('#reset-button');
-  if (resetButton) resetButton.addEventListener('click', resetState);
+  const pauseButton = document.querySelector('#pause-button');
+  if (pauseButton) pauseButton.addEventListener('click', pauseGame);
